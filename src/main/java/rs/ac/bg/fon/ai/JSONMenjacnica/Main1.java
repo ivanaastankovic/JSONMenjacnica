@@ -34,7 +34,7 @@ public class Main1 {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 			
 			JsonObject result = gson.fromJson(reader,JsonObject.class);
-		//	System.out.println(result);
+			System.out.println(result);
 			
 			if(result.get("success").getAsBoolean()) {
 				double kurs= result.get("quotes").getAsJsonObject().get("USDCAD").getAsDouble();
